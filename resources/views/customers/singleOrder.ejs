@@ -1,0 +1,26 @@
+<section class="status">
+    <div class="container mx-auto">
+        <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary"><a href="/customer/orders">Go Back</a></button>
+        <div class="status-box w-full lg:w-2/3 mx-auto">
+            <div class="flex items-center justify-between mb-12">
+                <h1 class="text-xl font-bold">Track delivery status</h1>
+                <h6 class="bg-white py-1 rounded-full px-4 text-green-600 text-xs"><%=
+                    order._id %></h6>
+                <input id="hiddenInput" type="hidden" value="<%= JSON.stringify(order) %>">
+            </div>
+            <ul>
+                <li class="status_line text-sm md:text-xl pb-16" data-status="order_placed"><span>Order Placed</span>
+                </li>
+                <li class="status_line text-sm md:text-xl pb-16" data-status="confirmed"><span>Order confirmation</span>
+                </li>
+                <li class="status_line text-sm md:text-xl pb-16" data-status="prepared"><span>Preparing</span></li>
+                <li class="status_line text-sm md:text-xl pb-16" data-status="delivered"><span>Out for delivery </span>
+                </li>
+                <li class="status_line text-sm md:text-xl" data-status="completed"><span>Completed</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer class="footer" style="background-color: #f8f9fa;padding: 20px; text-align: center; position: fixed; bottom: 0;width: 100%">
+    <p>&copy; 2023 Pizza Haven. All rights reserved.</p>
+</footer>
