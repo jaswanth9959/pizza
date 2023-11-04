@@ -54,7 +54,7 @@ export async function initStripe() {
       for (let [key, value] of formData.entries()) {
         formObject[key] = value;
       }
-
+      console.log(formObject);
       if (!card) {
         // Ajax
         placeOrder(formObject);
@@ -62,9 +62,9 @@ export async function initStripe() {
       }
 
       const token = await card.createToken();
+
       formObject.stripeToken = token.id;
       placeOrder(formObject);
-      console.log(formObject);
       // // Verify card
       // stripe.createToken(card).then((result) => {
       //     formObject.stripeToken = result.token.id;

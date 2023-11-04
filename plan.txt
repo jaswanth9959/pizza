@@ -44,3 +44,12 @@
         - dependancies socket.io
 [ ] Build project for deployment
 [ ] Deploy project on live server
+
+
+
+-> remove item from cart
+-> manage pizzas from admin( add, remove, update)
+-> take care for routing in few places
+-> responsive nav bar ---> fixed
+-> stripe payment failure----> no token error!!!!
+-> also show all orders
